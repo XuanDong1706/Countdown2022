@@ -1,0 +1,49 @@
+.modal-letter{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.7);
+    align-items: center;
+    justify-content: center;
+    display: none; 
+}
+
+.modal-letter.open{
+    display: flex;
+}
+
+.js-letter {
+    color:#dddddd;
+    position: fixed;
+    bottom: 1%;
+    right: 1%;
+}
+
+.modal-letter .modal-letter-container {
+    animation: FadeIn ease-in-out 1s ;
+    transition: ease-in-out;
+}
+
+.js-letter > i {
+    font-size: 48px;
+}
+
+.js-letter:hover {
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+@keyframes FadeIn{
+    from {
+        opacity: 0;
+        transform: translateY(-150px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
